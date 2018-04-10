@@ -1,0 +1,43 @@
+[user]
+    name = nguyen.hieu
+    email = nguyen.hieu@zalora.com
+
+[core]
+    excludesfile = ~/.gitignore
+    editor = nano
+    pager = less
+
+[color]
+        ui = auto
+[color "branch"]
+        current = yellow bold
+        local = green bold
+        remote = cyan bold
+[color "diff"]
+        meta = yellow bold
+        frag = magenta bold
+        old = red bold
+        new = green bold
+        whitespace = red reverse
+[color "status"]
+        added = green bold
+        changed = yellow bold
+        untracked = red bold
+
+[alias]
+    st = status
+    rb = rebase
+    ci = commit
+    co = checkout
+    df = diff
+    gl = log --graph --oneline --all
+    br = branch -v
+    list = branch -av
+    lg = log --abbrev=10 --oneline --graph
+    del = branch -D
+    cp = cherry-pick -n
+    m = merge --no-commit
+    ff = pull --ff-only
+    cim = "!f() { git commit -m \"SHOP-$(git rev-parse --abbrev-ref HEAD): $@\"; }; f"
+[log]
+    abbrevCommit = true
